@@ -7,13 +7,13 @@
 <h2>@Model["vendor"].Name</h2>
 <p>@Model["vendor"].Description</p>
 
-
 <ol>
 @foreach (Order order in @Model["orders"])
 {
   <li><a href='/categories/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
 }
 </ol>
+
 
 <p><a href='/categories/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/categories'>Return to category list</a></p>

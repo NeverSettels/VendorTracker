@@ -19,7 +19,10 @@ namespace VendorTracker.Models
       _currentId++;
       _instances.Add(this);
     }
-  
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
     public static List<Vendor> GetAll()
     {
     
