@@ -2,12 +2,14 @@
   Layout = "_Layout";
 }
 
-
+@using VendorTracker.Models
 
 <h2>@Model.Name</h2>
 <p>@Model.Description</p>
 
-<a href="/vendors/{id}/order/new"></a>
+
+
+<a href="/vendors/@Model.Id/order/new">add order</a>
 
 
 <p><a href='/vendors'>Return to category list</a></p>
