@@ -31,7 +31,7 @@ namespace VendorTracker.Controllers
     public ActionResult Show(int id)
     {
       Vendor foundV = Vendor.Find(id);
-       Dictionary<string, object> model = new Dictionary<string, object>();
+      Dictionary<string, object> model = new Dictionary<string, object>();
       List<Order> vendorOrders = foundV.Orders;
       model.Add("vendor", foundV);
       model.Add("orders", vendorOrders);
