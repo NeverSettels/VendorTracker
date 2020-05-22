@@ -22,11 +22,7 @@ namespace VendorTracker.Models
   
     public static List<Vendor> GetAll()
     {
-      foreach(Vendor vendor in _instances)
-      {
-         Console.WriteLine(vendor.Name)
-      }
-     
+    
       return _instances;
     }
 

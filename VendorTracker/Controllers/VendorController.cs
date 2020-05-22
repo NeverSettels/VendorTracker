@@ -26,5 +26,12 @@ namespace VendorTracker.Controllers
       Vendor newVendor = new Vendor(name,desc);
       return RedirectToAction("Index");
     }
+    
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int id)
+    {
+      Vendor foundV = Vendor.Find(id);
+      return View(foundV);
+    }
   }
 }
