@@ -1,10 +1,10 @@
 @{
   Layout = "_Layout";
 }
-<h1>Add a Vendor</h1>
-<p>Add a category here:</p>
 
-<form action="/vendors/@Model.Id" method="post">
+
+<form action="/categories/@Model.Id/order" method="post">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="name">Order Name</label>
   <input id="name" name="name" type="text">
    <label for="desc">Order Description</label>
