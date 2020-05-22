@@ -13,8 +13,33 @@ namespace VendorTracker.Models
     private static int _currentId = 0;
 
 
-    public Order()
+    public Order(string name, string desc, int price, string dd)
     {
+         Name = name;
+      Description=desc;
+      Price = price;
+      DeliveryDate =dd; 
+      Id=_currentId;
+      _currentId++;
+      _instances.Add(this);
     }
+     public static List<Order> GetAll()
+    {
+    
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId];
+    }
+
+  }
+}
   }
 }
