@@ -4,14 +4,22 @@
 
 @using VendorTracker.Models
 
-<h2>@Model["vendor"].Name</h2>
-<p>@Model["vendor"].Description</p>
+<h2>@Model.Name</h2>
+<p>@Model.Description</p>
 
 <ol>
-
+@if(@Model.Orders != null){
+   @foreach(Order order in @Model.Orders)
+   {
+     <p>@order.Name</p>
+   }
+}
+else{
+  <p>Nothing ordered yet</p>
+}
 </ol>
 
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/vendors/@Model.Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>Vendors</a></p>
 <p><a href='/'>Home</a></p>
