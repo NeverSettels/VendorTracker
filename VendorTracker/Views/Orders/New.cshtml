@@ -2,7 +2,8 @@
   Layout = "_Layout";
 }
 
-
+<div class='main-container'>
+<div class='form-container'>
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="name">Order Name</label>
@@ -17,6 +18,7 @@
 </form>
 
 
-
-<p><a href="/">Back home</a></p>
-<p><a href="/vendors">Back to vendors.</a></p>
+<a href="/"><button>Back home</button></a>
+<a href="/vendors"><button>Back to vendors.</button></a>
+</div>
+</div>

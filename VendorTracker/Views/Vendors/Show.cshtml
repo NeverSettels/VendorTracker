@@ -3,7 +3,8 @@
 }
 
 @using VendorTracker.Models
-
+<div class='main-container'>
+<div class='form-container'>
 <h2>@Model.Name</h2>
 <p>@Model.Description</p>
 
@@ -20,6 +21,9 @@ else{
 </ol>
 
 
-<p><a href='/vendors/@Model.Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Vendors</a></p>
-<p><a href='/'>Home</a></p>
+<p><a href='/vendors/@Model.Id/orders/new'><button>Add a new order</button></a></p>
+<p><a href='/vendors'><button>Vendors</button></a></p>
+<p><a href='/'><button>Home</button></a></p>
+
+</div>
+</div>
