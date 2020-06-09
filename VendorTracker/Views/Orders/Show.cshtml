@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>To Do List Item Details: </h1>
+
+<h2>@Model["order"].Name</h2>
+<h2>@Model["order"].Description</h2>
+<h2>@Model["order"].Price</h2>
+<h2>@Model["order"].DeliveryDate</h2>
+<h3>Category: @Model["vendor"].Name</h3>
+
+<a href='/vendor/@Model["vendoe"].Id/order/new'>Add another order</a>
+<a href='/vendor'>View all vendors</a>

@@ -31,14 +31,6 @@ namespace VendorTracker.Controllers
     public ActionResult Show(int id)
     {
       Vendor foundV = Vendor.Find(id);
-      // Dictionary<string, object> model = new Dictionary<string, object>();
-      // List<Order> vendorOrders = foundV.Orders;
-      // Console.WriteLine("ORDERS LIST BEFORE MODEL");
-      // Console.WriteLine(vendorOrders.Count);
-      // model.Add("vendor", foundV);
-      // model.Add("orders", vendorOrders);
-      // Console.WriteLine("ORDERS LIST");
-      // Console.WriteLine(model["orders"]);
       return View(foundV);
     }
   
@@ -48,7 +40,7 @@ namespace VendorTracker.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(name,desc,price,dd);
-      foundVendor.AddOrder(newOrder); 
+      foundVendor.Orders.Add(newOrder); 
       List<Order> VendorOrders = foundVendor.Orders;
       model.Add("orders", VendorOrders);
       model.Add("vendor", foundVendor);
