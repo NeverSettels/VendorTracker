@@ -40,12 +40,12 @@ namespace VendorTracker.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(name,desc,price,dd);
-      Console.WriteLine(foundVendor.Orders);
       foundVendor.Orders.Add(newOrder); 
       List<Order> VendorOrders = foundVendor.Orders;
       model.Add("orders", VendorOrders);
       model.Add("vendor", foundVendor);
-      return View("Show", model);
+      return View("Show", foundVendor);  
+
     }
 }
 }

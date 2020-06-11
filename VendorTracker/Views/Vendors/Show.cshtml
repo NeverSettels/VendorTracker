@@ -12,7 +12,7 @@
 @if(@Model.Orders != null){
    @foreach(Order order in @Model.Orders)
    {
-     <p>@order.Name</p>
+       <li><a href='/vendors/@Model.Id/orders/@order.Id'>@order.Name</a></li>
    }
 }
 else{

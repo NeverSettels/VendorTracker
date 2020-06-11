@@ -10,7 +10,7 @@ namespace VendorTracker.Models
     public string DeliveryDate {get;set;}
      public int Id  {get;}
    private static List<Order>  _instances = new List<Order> {};
-    private static int _currentId = 1;
+    private static int _currentId = 0;
 
 
     public Order(string name, string desc, int price, string dd)
@@ -26,7 +26,7 @@ namespace VendorTracker.Models
      public static List<Order> GetAll()
     {
     
-      return _instances;
+      return _instances; 
     }
 
     public static void ClearAll()

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorTracker.Models
 {
@@ -18,6 +19,7 @@ namespace VendorTracker.Models
       Id=_currentId;
       _currentId++;
       _instances.Add(this);
+      Orders = new List<Order>{};
     }
     public void AddOrder(Order order)
     {
